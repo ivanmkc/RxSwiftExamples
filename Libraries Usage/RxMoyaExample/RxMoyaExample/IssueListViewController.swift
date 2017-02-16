@@ -37,7 +37,7 @@ class IssueListViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     let disposeBag = DisposeBag()
-    var provider: RxMoyaProvider<GitHub>!
+    var provider: RxMoyaProvider<TripVerseNetworking>!
     var issueTrackerModel: IssueTrackerModel!
     
     var latestRepositoryName: Observable<String> {
@@ -54,10 +54,10 @@ class IssueListViewController: UIViewController {
     
     func setupRx() {
         // First part of the puzzle, create our Provider
-        provider = RxMoyaProvider<GitHub>()
+        provider = RxMoyaProvider<TripVerseNetworking>()
         
         // Now we will setup our model
-        issueTrackerModel = IssueTrackerModel(provider: provider, repositoryName: latestRepositoryName)
+        issueTrackerModel = IssueTrackerModel(provider: provider, tripId: latestRepositoryName)
         
         // And bind issues to table view
         // Here is where the magic happens, with only one binding
@@ -66,7 +66,7 @@ class IssueListViewController: UIViewController {
             .trackIssues()
             .bindTo(tableView.rx.items) { (tableView, row, item) in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "issueCell", for: IndexPath(row: row, section: 0))
-                cell.textLabel?.text = item.title
+                cell.textLabel?.text = item.name
                 
                 return cell
             }
@@ -84,8 +84,8 @@ class IssueListViewController: UIViewController {
             .addDisposableTo(disposeBag)
     }
 
-    func url(_ route: TargetType) -> String {
-        return route.baseURL.appendingPathComponent(route.path).absoluteString
-    }
+//    func url(_ route: TargetType) -> String {
+//        return route.baseURL.appendingPathComponent(route.path).absoluteString
+//    }
 }
 

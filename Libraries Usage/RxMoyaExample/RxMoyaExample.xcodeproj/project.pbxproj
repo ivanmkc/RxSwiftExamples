@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		144106B71C6CC62D00CD6F15 /* GithubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144106B61C6CC62D00CD6F15 /* GithubEndpoint.swift */; };
+		144106B71C6CC62D00CD6F15 /* TVNetworkingEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144106B61C6CC62D00CD6F15 /* TVNetworkingEndpoint.swift */; };
 		144106B91C6CC75F00CD6F15 /* RespositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144106B81C6CC75F00CD6F15 /* RespositoryEntity.swift */; };
 		144106BF1C6CD66600CD6F15 /* IssueTrackerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144106BE1C6CD66600CD6F15 /* IssueTrackerModel.swift */; };
-		144106C11C6CE00400CD6F15 /* IssueEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144106C01C6CE00400CD6F15 /* IssueEntity.swift */; };
+		144106C11C6CE00400CD6F15 /* TVActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144106C01C6CE00400CD6F15 /* TVActivity.swift */; };
 		14F750CA1C6B8289005EED40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F750C91C6B8289005EED40 /* AppDelegate.swift */; };
 		14F750CC1C6B8289005EED40 /* IssueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F750CB1C6B8289005EED40 /* IssueListViewController.swift */; };
 		14F750CF1C6B8289005EED40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F750CD1C6B8289005EED40 /* Main.storyboard */; };
@@ -20,10 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		144106B61C6CC62D00CD6F15 /* GithubEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubEndpoint.swift; sourceTree = "<group>"; };
+		144106B61C6CC62D00CD6F15 /* TVNetworkingEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVNetworkingEndpoint.swift; sourceTree = "<group>"; };
 		144106B81C6CC75F00CD6F15 /* RespositoryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RespositoryEntity.swift; sourceTree = "<group>"; };
 		144106BE1C6CD66600CD6F15 /* IssueTrackerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTrackerModel.swift; sourceTree = "<group>"; };
-		144106C01C6CE00400CD6F15 /* IssueEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueEntity.swift; sourceTree = "<group>"; };
+		144106C01C6CE00400CD6F15 /* TVActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVActivity.swift; sourceTree = "<group>"; };
 		14F750C61C6B8289005EED40 /* RxMoyaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMoyaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F750C91C6B8289005EED40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F750CB1C6B8289005EED40 /* IssueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListViewController.swift; sourceTree = "<group>"; };
@@ -60,10 +60,9 @@
 		144106BA1C6CCB4100CD6F15 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				144106B61C6CC62D00CD6F15 /* GithubEndpoint.swift */,
+				144106B61C6CC62D00CD6F15 /* TVNetworkingEndpoint.swift */,
 				144106B81C6CC75F00CD6F15 /* RespositoryEntity.swift */,
 				144106BE1C6CD66600CD6F15 /* IssueTrackerModel.swift */,
-				144106C01C6CE00400CD6F15 /* IssueEntity.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -97,6 +96,7 @@
 		14F750C81C6B8289005EED40 /* RxMoyaExample */ = {
 			isa = PBXGroup;
 			children = (
+				C9979CB81E55414B00BC417C /* Models */,
 				144106BB1C6CD05400CD6F15 /* View controllers */,
 				144106BA1C6CCB4100CD6F15 /* Networking */,
 				14F750C91C6B8289005EED40 /* AppDelegate.swift */,
@@ -114,6 +114,14 @@
 				D28AB2BEF38783E54176281A /* Pods_RxMoyaExample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9979CB81E55414B00BC417C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				144106C01C6CE00400CD6F15 /* TVActivity.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +249,10 @@
 			files = (
 				14F750CC1C6B8289005EED40 /* IssueListViewController.swift in Sources */,
 				144106B91C6CC75F00CD6F15 /* RespositoryEntity.swift in Sources */,
-				144106B71C6CC62D00CD6F15 /* GithubEndpoint.swift in Sources */,
+				144106B71C6CC62D00CD6F15 /* TVNetworkingEndpoint.swift in Sources */,
 				14F750CA1C6B8289005EED40 /* AppDelegate.swift in Sources */,
 				144106BF1C6CD66600CD6F15 /* IssueTrackerModel.swift in Sources */,
-				144106C11C6CE00400CD6F15 /* IssueEntity.swift in Sources */,
+				144106C11C6CE00400CD6F15 /* TVActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
